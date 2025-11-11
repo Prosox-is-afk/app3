@@ -4,6 +4,7 @@ import 'package:td2_app/models/viewmodel.dart';
 import '../models/tasks.dart';
 import 'detail.dart';
 
+// ignore: must_be_immutable
 class Ecran1 extends StatelessWidget {
   late List<Task> myTasks; //=Task.generateTask(50);
   String tags = '';
@@ -33,8 +34,7 @@ class Ecran1 extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) 
-                    => Detail(task: myTasks[index]),
+                    builder: (context) => Detail(task: myTasks[index]),
                   ),
                 );
               },
