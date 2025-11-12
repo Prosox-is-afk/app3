@@ -18,4 +18,9 @@ class SettingsViewModel extends ChangeNotifier {
     _settingRepository.saveSettings(value);
     notifyListeners();
   }
+
+  Future<void> getSettings() async {
+    _isDark = await _settingRepository.getSettings();
+    notifyListeners();
+  }
 }

@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SettingsRepository {
   static const THEME_KEY = "darkMode";
 
-  saveSettings(bool value) async {
+  Future<void> saveSettings(bool value) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(THEME_KEY, value);
   }
